@@ -1,4 +1,3 @@
-#
 # Makefile for esp-link - https://github.com/jeelabs/esp-link
 #
 # Makefile heavily adapted to esp-link and wireless flashing by Thorsten von Eicken
@@ -57,7 +56,7 @@ XTENSA_TOOLS_ROOT ?= $(abspath ../esp-open-sdk/xtensa-lx106-elf/bin)/
 # Firmware version 
 # WARNING: if you change this expect to make code adjustments elsewhere, don't expect
 # that esp-link will magically work with a different version of the SDK!!!
-SDK_VERS ?= esp_iot_sdk_v2.0.0.p1
+SDK_VERS ?= esp_iot_sdk_v2.1.0
 
 # Try to find the firmware manually extracted, e.g. after downloading from Espressif's BBS,
 # http://bbs.espressif.com/viewforum.php?f=46
@@ -87,7 +86,7 @@ ESPBAUD		?= 230400
 # --------------- chipset configuration   ---------------
 
 # Pick your flash size: "512KB", "1MB", or "4MB"
-FLASH_SIZE ?= 4MB
+FLASH_SIZE ?= 1MB
 
 # The pin assignments below are used when the settings in flash are invalid, they
 # can be changed via the web interface

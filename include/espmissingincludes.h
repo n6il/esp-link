@@ -17,11 +17,13 @@ char *wifi_station_get_hostname(void);
 
 int atoi(const char *nptr);
 
+/*
 void ets_install_putc1(void *routine); // necessary for #define os_xxx -> ets_xxx
 void ets_isr_attach(int intr, void *handler, void *arg);
+*/
 void ets_isr_mask(unsigned intr);
 void ets_isr_unmask(unsigned intr);
-
+/*
 int ets_memcmp(const void *s1, const void *s2, size_t n);
 void *ets_memcpy(void *dest, const void *src, size_t n);
 void *ets_memmove(void *dest, const void *src, size_t n);
@@ -40,6 +42,7 @@ void ets_timer_disarm(ETSTimer *a);
 void ets_timer_setfn(ETSTimer *t, ETSTimerFunc *fn, void *parg);
 
 void ets_update_cpu_frequency(int freqmhz);
+*/
 
 #ifdef SDK_DBG
 #define DEBUG_SDK true
@@ -59,7 +62,7 @@ int os_printf_plus(const char *format, ...)  __attribute__((format(printf, 1, 2)
     system_set_os_print(DEBUG_SDK);                                           \
   } while (0)
 
-
+/*
 // memory allocation functions are "different" due to memory debugging functionality
 // added in SDK 1.4.0
 void vPortFree(void *ptr, const char * file, int line);
@@ -73,6 +76,7 @@ uint32 system_get_time();
 int rand(void);
 void ets_bzero(void *s, size_t n);
 void ets_delay_us(int ms);
+*/
 
 // disappeared in SDK 1.1.0:
 #define os_timer_done ets_timer_done
