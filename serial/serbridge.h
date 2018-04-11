@@ -6,7 +6,7 @@
 #include <espconn.h>
 
 #define MAX_CONN 4
-#define SER_BRIDGE_TIMEOUT 300 // 300 seconds = 5 minutes
+#define SER_BRIDGE_TIMEOUT 7200
 
 // Send buffer size
 #define MAX_TXBUFFER (2*1460)
